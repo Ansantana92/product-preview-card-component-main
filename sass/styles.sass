@@ -1,0 +1,105 @@
+@use 'variables'
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-size: 14px
+
+body
+    background-color: variables.$cream
+.container
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 95vh
+.card
+    display: flex
+    flex-direction: row
+    width: 40%
+    height: 60%
+    background-color: variables.$white
+    border-radius: 2%
+img
+    width: 50%
+    border-top-left-radius: 2%
+    border-bottom-left-radius: 2% 
+    object-fit: cover
+.description
+    display: flex
+    justify-content: center
+.description h1
+    font-family: variables.$fraunces
+    font-size: 2rem
+    line-height: 2rem
+.org
+    display: flex
+    flex-direction: column
+    width: 78%
+    height: 100%
+    justify-content: space-evenly
+#org-title
+    color: variables.$dark-grayish-blue
+    font-family: variables.$montserrat
+    letter-spacing: 0.2rem
+    font-size: 0.8rem
+#description
+    color: variables.$dark-grayish-blue
+    font-family: variables.$montserrat
+    font-size: 0.9rem
+    line-height: 1.5rem
+.price
+    display: flex
+    align-items: center
+    gap: 7%
+.price p 
+    font-family: variables.$fraunces
+.price p:first-child
+    color: variables.$dark-cyan
+    font-size: 2rem
+.price p:last-child
+    color: variables.$dark-grayish-blue
+    text-decoration: line-through
+    font-size: 0.8rem
+    font-family: variables.$montserrat    
+button
+    display: flex
+    align-items: center
+    justify-content: center
+    gap: 5%
+    background-color: variables.$dark-cyan
+    color: variables.$white
+    padding: 1rem
+    border-radius: 0.6rem
+    border: none
+    font-family: variables.$montserrat
+button:hover 
+    background-color: variables.$white
+    color: variables.$dark-cyan
+    border: 1px solid variables.$dark-cyan
+footer
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: variables.$dark-cyan
+    position: fixed
+    bottom: 0
+    width: 100%
+    padding: 1rem   
+footer a
+    color: white
+    text-decoration: none
+// Media 950px
+@media (max-width: 900px)
+    .card
+        flex-direction: column
+        min-width: 80vw
+        min-height: 70vh 
+    img
+        width: 100%
+        height: 40%
+        border-top-left-radius: 2%
+        border-bottom-left-radius: 0
+        border-top-right-radius: 2%
+    .description
+        height: 100%
+
